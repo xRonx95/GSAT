@@ -57,7 +57,9 @@ async function main() {
   await evaluate('localStorage.removeItem(SESSION_KEY); session = null; location.hash="dashboard"; route()');
   await evaluate('document.getElementById("appDownloadOpen").click()');
   assert.equal(await evaluate('document.getElementById("appDownloadDialog").open'),true);
-  assert.equal(await evaluate('document.getElementById("appDownloadLink").getAttribute("href")'),'downloads/app-debug.apk');
+  assert.equal(await evaluate('document.getElementById("appDownloadLink").getAttribute("href")'),'downloads/GSAT.apk');
+  assert.equal(await evaluate('document.getElementById("appDownloadLink").download'),'GSAT.apk');
+  assert.ok(fs.statSync(path.join(root, 'downloads', 'GSAT.apk')).size > 0);
   for (const width of [320,390,768,1280]) {
     await call('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<=700});
     assert.ok(await evaluate('(()=>{const r=document.getElementById("appDownloadDialog").getBoundingClientRect();return r.left>=0 && r.right<=innerWidth && r.top>=0 && r.bottom<=innerHeight})()'),`Download dialog fits at ${width}`);

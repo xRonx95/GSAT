@@ -24,7 +24,7 @@
   });
   document.getElementById('appDownloadLink').addEventListener('click', () => {
     remember();
-    document.getElementById('appDownloadStatus').textContent = 'Download requested. Check your browser downloads for app-debug.apk.';
+    document.getElementById('appDownloadStatus').textContent = 'Download requested. Check your browser downloads for GSAT.apk.';
   });
   let seen = false;
   try { seen = sessionStorage.getItem(storageKey) === '1'; } catch (_) { /* Still offer the download. */ }
