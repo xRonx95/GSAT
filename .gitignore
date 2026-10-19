@@ -1,0 +1,31 @@
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Gradle and Android generated files
+.gradle/
+**/build/
+**/.gradle/
+*.apk
+*.aab
+
+# Android local settings
+local.properties
+**/.idea/
+*.iml
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.key
+google-services.json
+
+# Temporary files
+.tmp-ui/
+.DS_Store
+Thumbs.db

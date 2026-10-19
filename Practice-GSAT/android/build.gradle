@@ -1,0 +1,42 @@
+
+/*
+ * Practice GSAT
+ * Android Gradle Configuration
+ */
+
+buildscript {
+    repositories {
+        google()
+
+        // Accessible Maven Central mirror
+        maven {
+            url = uri("https://maven-central.storage-download.googleapis.com/maven2/")
+        }
+
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath 'com.google.gms:google-services:4.4.4'
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+
+        // Maven Central mirror
+        maven {
+            url = uri("https://maven-central.storage-download.googleapis.com/maven2/")
+        }
+
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

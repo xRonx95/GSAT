@@ -1,0 +1,929 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#f7f8fc">
+
+    <meta name="description"
+          content="WMSU GSAT 2026 Online Reviewer for Graduate School Admission Test preparation.">
+
+    <title>
+        GSAT Preparation 2026 | Online Reviewer
+    </title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="download.css">
+</head>
+
+<body>
+
+    <!-- ==================================
+         TOP NAVIGATION
+    ================================== -->
+
+    <header class="top">
+
+        <div class="top-inner">
+
+            <a href="#dashboard" class="brand">
+
+                <span class="brand-mark">
+                    G
+                </span>
+
+                <span>
+                    <strong>
+                        GSAT Preparation 2026
+                    </strong>
+
+                    <small>
+                        Graduate School Admission Test Preparation
+                    </small>
+                </span>
+
+            </a>
+
+            <!-- Mobile Menu -->
+
+            <button
+                id="menuBtn"
+                class="menu-btn"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Links -->
+
+            <nav id="nav">
+
+                <a href="#dashboard"
+                   data-page="dashboard">
+                    Overview
+                </a>
+
+                <a href="#lessons"
+                   data-page="lessons">
+                    Lessons
+                </a>
+
+                <a href="#practice"
+                   data-page="practice">
+                    Practice Assessment
+                </a>
+
+                <a href="#mock"
+                   data-page="mock">
+                    Mock Exam
+                </a>
+
+                <a href="#essay"
+                   data-page="essay">
+                    Essay Workshop
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================
+         MAIN WEBSITE CONTENT
+    ================================== -->
+
+    <main class="container" id="mainContent">
+
+
+        <!-- ==============================
+             DASHBOARD
+        ============================== -->
+
+        <section
+            id="dashboard"
+            class="page active">
+
+            <div class="dashboard-heading"><div><span class="eyebrow dark">YOUR STUDY SPACE</span><h1>Prepare with purpose.</h1><p>A structured path to your next academic chapter.</p></div><span class="academic-badge">GSAT <b>2026</b></span></div>
+
+            <!-- Hero Section -->
+
+            <div class="hero">
+
+                <div>
+
+                    <span class="eyebrow">
+                        INDEPENDENT GSAT PREPARATION
+                    </span>
+
+                    <h2>Build confidence.<br><em>One subject at a time.</em></h2>
+
+                    <p>
+                        Focused subject review, worked solutions, and a complete four-hour practice examination.
+                    </p>
+
+                    <div class="hero-tags"><span>5 core subjects</span><span>200 exam questions</span><span>250-word essays</span></div>
+
+                    <div class="hero-actions">
+
+                        <a href="#practice"
+                           class="btn btn-light">
+                            Begin Practice <span aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="#lessons"
+                           class="btn btn-ghost-light">
+                            Explore Subjects
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Examination Information -->
+
+                <div class="hero-side">
+                    <div class="study-illustration" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="illustration-sheet"><span>GSAT / 2026</span><b>Aa</b><i></i><i></i><i></i><div>✓ &nbsp; Study. Practice. Progress.</div></div><span class="floating-symbol symbol-one">∑</span><span class="floating-symbol symbol-two">A:B</span></div>
+
+                    <div>
+                        <span>
+                            ASSESSMENT FORMAT
+                        </span>
+
+                        <strong>
+                            Multiple-choice practice
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            TIMED PRACTICE
+                        </span>
+
+                        <strong>
+                            200 items · 4 hours
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            RESPONSE REVIEW
+                        </span>
+
+                        <strong>
+                            Answer keys and explanations
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="disclaimer">
+                Disclaimer: This is an independent
+                educational reviewer. All questions are original practice materials, not official or predicted WMSU examination items. Coverage and timing are preparation settings.
+                WMSU lists GSAT and CET separately; the five review domains here are a preparation scope rather than a verified GSAT syllabus.
+                <a href="https://wmsu.edu.ph/wp-content/uploads/2025/03/Citizens_Charter-1.pdf" target="_blank" rel="noopener noreferrer">WMSU examination services</a>.
+            </p>
+
+
+            <!-- Study Statistics -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        PERFORMANCE RECORD
+                    </span>
+
+                    <h2>
+                        Your Progress
+                    </h2>
+
+                </div>
+
+                <button
+                    id="resetProgress"
+                    class="btn btn-outline small"
+                    type="button">
+                    Reset Progress
+                </button>
+
+            </div>
+
+
+            <div class="stats">
+
+                <article class="stat">
+
+                    <span>
+                        Questions Practiced
+                    </span>
+
+                    <strong id="statAnswered">
+                        0
+                    </strong>
+
+                    <small>
+                        Total submitted questions
+                    </small>
+
+                </article>
+
+
+                <article class="stat">
+
+                    <span>
+                        Correct Answers
+                    </span>
+
+                    <strong id="statCorrect">
+                        0
+                    </strong>
+
+                    <small>
+                        Questions answered correctly
+                    </small>
+
+                </article>
+
+
+                <article class="stat">
+
+                    <span>
+                        Overall Accuracy
+                    </span>
+
+                    <strong id="statAccuracy">
+                        —
+                    </strong>
+
+                    <small>
+                        Cumulative practice accuracy
+                    </small>
+
+                </article>
+
+
+                <article class="stat">
+
+                    <span>
+                        Best Mock Exam
+                    </span>
+
+                    <strong id="statBest">
+                        —
+                    </strong>
+
+                    <small>
+                        Highest mock examination score
+                    </small>
+
+                </article>
+
+            </div>
+
+
+            <!-- Subjects -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow dark">
+                        PREPARATION DOMAINS
+                    </span>
+
+                    <h2>
+                        Your Study Plan
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript generates cards here -->
+
+            <div
+                id="subjectCards"
+                class="subject-grid">
+            </div>
+
+
+            <!-- Study Tips -->
+
+            <div class="study-tip">
+
+                <strong>
+                    Suggested Study Allocation
+                </strong>
+
+                <p>
+                    English – 30 minutes
+                </p>
+
+                <p>
+                    Mathematics – 30 minutes
+                </p>
+
+                <p>
+                    Logical Reasoning – 20 minutes
+                </p>
+
+                <p>
+                    Essay Writing – 20 minutes
+                </p>
+
+                <p>
+                    Review all incorrect answers before
+                    taking another practice examination.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             LESSONS PAGE
+        ============================== -->
+
+        <section
+            id="lessons"
+            class="page">
+
+            <div class="page-heading">
+
+                <span class="eyebrow dark">
+                    CONCEPTS AND APPLICATIONS
+                </span>
+
+                <h1>
+                    Subject Review
+                </h1>
+
+                <p>
+                    Review core concepts and worked examples, with emphasis on the reasoning behind each solution.
+                </p>
+
+            </div>
+
+
+            <!-- Subject Selection Tabs -->
+
+            <div
+                id="lessonTabs"
+                class="subject-tabs">
+            </div>
+
+
+            <!-- Generated Lesson Content -->
+
+            <div
+                id="lessonContent"
+                class="lesson-content">
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             PRACTICE QUIZ PAGE
+        ============================== -->
+
+        <section
+            id="practice"
+            class="page">
+
+            <div class="page-heading">
+
+                <span class="eyebrow dark">
+                    SUBJECT ASSESSMENT
+                </span>
+
+                <h1>
+                    GSAT Practice Assessment
+                </h1>
+
+                <p>
+                    Select your subject,
+                    choose the number of questions,
+                    and answer the examination.
+                </p>
+
+                <p>
+                    After submitting, your score,
+                    correct answers, and explanations
+                    will appear automatically.
+                </p>
+
+            </div>
+
+
+            <!-- Practice Settings -->
+
+            <div class="panel">
+
+                <div class="quiz-controls">
+
+                    <!-- Subject Dropdown -->
+
+                    <label for="practiceSubject">
+
+                        Select Subject
+
+                        <select id="practiceSubject">
+
+                            <option value="all">
+                                All Subjects
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <!-- Number of Questions -->
+
+                    <label for="practiceCount">
+
+                        Number of Questions
+
+                        <select id="practiceCount">
+
+                            <option value="5">
+                                5 Questions
+                            </option>
+
+                            <option
+                                value="10"
+                                selected>
+                                10 Questions
+                            </option>
+
+                            <option value="20">
+                                20 Questions
+                            </option>
+
+                            <option value="all">
+                                All Available Questions
+                            </option>
+                            <option value="50">50 Questions</option>
+                            <option value="100">100 Questions</option>
+                            <option value="200">200 Questions</option>
+
+                        </select>
+
+                    </label>
+
+
+                    <!-- Start Button -->
+
+                    <button
+                        id="startPractice"
+                        class="btn btn-primary"
+                        type="button">
+                        Start Practice Assessment
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Practice Questions -->
+
+            <div
+                id="practiceArea"
+                class="quiz-area">
+
+                <div class="empty-state">
+
+                    <h3>
+                        Assessment Instructions
+                    </h3>
+
+                    <p>
+                        Select your subject and
+                        number of questions above.
+                    </p>
+
+                    <p>
+                        Click Start Practice Assessment
+                        to begin your review.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             MOCK EXAMINATION PAGE
+        ============================== -->
+
+        <section
+            id="mock"
+            class="page">
+
+            <div class="page-heading">
+
+                <span class="eyebrow dark">
+                    SIMULATED EXAMINATION
+                </span>
+
+                <h1>
+                    GSAT Mock Examination
+                </h1>
+
+                <p>
+                    Practice answering questions
+                    within a specified time limit
+                    to improve your examination
+                    preparation.
+                </p>
+
+            </div>
+
+
+            <!-- Examination Introduction -->
+
+            <div class="panel intro-panel">
+
+                <div>
+
+                    <h2>
+                        Examination Instructions
+                    </h2>
+
+                    <p>
+                        Assessment format: 200 multiple-choice items
+                    </p>
+
+                    <p>
+                        Practice Time Limit:
+                        4 hours / 240 minutes (practice setting)
+                    </p>
+
+                    <p>
+                        Sections: Language Proficiency, Verbal Analogy, Quantitative Reasoning,
+                        Science, and Logical/Abstract Reasoning.
+                        Forty questions cover each domain. Suggested pacing: 48 minutes per domain,
+                        or an average of 72 seconds per item. Actual completion time will vary.
+                        The bank contains 200 core examination items and 10 supplementary academic writing items.
+                        The 250-word writing workshop is a separate preparation activity.
+                    </p>
+
+                    <p>
+                        Select one best answer per item. Flag items for review and use Next Unanswered to locate incomplete items.
+                        Responses are saved in this browser and restored after a reload; the clock continues while the page is closed.
+                        Responses are submitted automatically when time expires. These are independent practice settings.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="startMock"
+                    class="btn btn-primary"
+                    type="button">
+                    Start Mock Examination
+                </button>
+
+            </div>
+
+
+            <!-- Generated Mock Exam -->
+
+            <div
+                id="mockArea"
+                class="quiz-area">
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             ESSAY WRITING PAGE
+        ============================== -->
+
+        <section
+            id="essay"
+            class="page">
+
+            <div class="page-heading">
+
+                <span class="eyebrow dark">
+                    DEVELOP YOUR WRITING SKILLS
+                </span>
+
+                <h1>
+                    Academic Writing Workshop
+                </h1>
+
+                <p>
+                    Write a 250-word response
+                    on academic, professional, or reflective topics.
+                    Develop your position with a relevant example and a reasoned conclusion.
+                    The live counter indicates when you meet the 250-word requirement.
+                </p>
+
+            </div>
+
+
+            <div class="essay-layout">
+
+
+                <!-- Essay Editor -->
+
+                <div class="panel">
+
+
+                    <!-- Essay Topic -->
+
+                    <label for="essayPrompt">
+                        Select Writing Task
+                    </label>
+
+                    <select id="essayPrompt">
+                    </select>
+
+
+                    <!-- Essay Writing Guide -->
+
+                    <div
+                        id="essayOutline"
+                        class="essay-outline">
+                    </div>
+
+
+                    <!-- Essay Writing Area -->
+
+                    <label for="essayText">
+                        Write Your Essay
+                    </label>
+
+                    <textarea
+                        id="essayText"
+                        rows="16"
+                        placeholder="Start writing your introduction, body paragraphs and conclusion here...">
+                    </textarea>
+
+
+                    <!-- Word Count and Controls -->
+
+                    <div class="essay-footer">
+
+                        <span id="wordCount">
+                            0 / 250 words · 250 words remaining
+                        </span>
+
+                        <div>
+
+                            <button
+                                id="clearEssay"
+                                class="btn btn-outline small"
+                                type="button">
+                                Clear Essay
+                            </button>
+
+                            <button
+                                id="downloadEssay"
+                                class="btn btn-primary small"
+                                type="button">
+                                Download Essay
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="subtle">
+                        Your essay draft is saved
+                        automatically in this browser.
+                        You can return and continue
+                        writing later.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Essay Checklist -->
+
+                <aside class="panel checklist">
+
+                    <h2>
+                        Essay Writing Checklist
+                    </h2>
+
+                    <p>
+                        Use this checklist to review
+                        your work before completing
+                        the essay.
+                    </p>
+
+
+                    <label>
+                        <input type="checkbox">
+                        Clear thesis statement
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Organized introduction
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Topic sentence in each paragraph
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Relevant examples and evidence
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Logical transitions
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Appropriate academic vocabulary
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Correct grammar and punctuation
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Strong concluding paragraph
+                    </label>
+
+
+                    <hr>
+
+
+                    <h3>
+                        Recommended Essay Structure
+                    </h3>
+
+                    <p>
+                        <strong>Introduction</strong>
+                    </p>
+
+                    <p>
+                        Introduce the subject,
+                        provide background information,
+                        and present your thesis.
+                    </p>
+
+
+                    <p>
+                        <strong>Body Paragraph 1</strong>
+                    </p>
+
+                    <p>
+                        Explain your first main argument
+                        with relevant supporting evidence.
+                    </p>
+
+
+                    <p>
+                        <strong>Body Paragraph 2</strong>
+                    </p>
+
+                    <p>
+                        Discuss your second argument
+                        and provide examples.
+                    </p>
+
+
+                    <p>
+                        <strong>Conclusion</strong>
+                    </p>
+
+                    <p>
+                        Summarize the main arguments,
+                        reinforce the thesis,
+                        and provide a final insight.
+                    </p>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <strong>
+                GSAT Preparation 2026
+            </strong>
+
+            <p>
+                Graduate School Admission Test
+                Online Practice Reviewer
+            </p>
+
+            <p>
+                Independent educational resource.
+                Not affiliated with Western
+                Mindanao State University.
+            </p>
+
+            <p>
+                © 2026 GSAT Prep.
+                For educational purposes only.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==================================
+         JAVASCRIPT
+    ================================== -->
+
+    <nav class="mobile-nav" aria-label="Primary mobile navigation">
+        <a href="#dashboard" data-page="dashboard" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Home</span></a>
+        <a href="#lessons" data-page="lessons"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Subjects</span></a>
+        <a href="#practice" data-page="practice"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8 10l2 2 5-5M9 16h6"/></svg><span>Practice</span></a>
+        <a href="#mock" data-page="mock"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v5l3 2M9 2h6M12 2v3"/></svg><span>Exam</span></a>
+        <a href="#essay" data-page="essay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14ZM4 20h16"/></svg><span>Writing</span></a>
+    </nav>
+
+    <button class="app-download-trigger" id="appDownloadOpen" type="button" aria-haspopup="dialog" aria-controls="appDownloadDialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+        <span>Get Android App</span>
+    </button>
+
+    <dialog class="app-download-dialog" id="appDownloadDialog" aria-labelledby="appDownloadTitle" aria-describedby="appDownloadDescription">
+        <button class="app-download-close" id="appDownloadClose" type="button" aria-label="Close download dialog" autofocus>&times;</button>
+        <div class="app-download-heading">
+            <span class="app-download-mark" aria-hidden="true">G</span>
+            <span class="app-download-eyebrow">GSAT PREPARATION 2026<br><span>ANDROID APPLICATION</span></span>
+        </div>
+        <h2 id="appDownloadTitle">Your preparation.<br>Always within reach.</h2>
+        <p id="appDownloadDescription">Continue your graduate admission test preparation with the GSAT Android application.</p>
+        <div class="app-download-details" aria-label="Download information">
+            <div><span>Platform</span><strong>Android 7.0+</strong></div>
+            <div><span>File size</span><strong>9.1 MB</strong></div>
+            <div><span>Build</span><strong>Debug APK</strong></div>
+        </div>
+        <a class="app-download-primary" id="appDownloadLink" href="downloads/app-debug.apk" download="app-debug.apk">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+            Download for Android <span aria-hidden="true">&rarr;</span>
+        </a>
+        <p class="app-download-status" id="appDownloadStatus" role="status"></p>
+        <details class="app-download-instructions">
+            <summary>How to install the application</summary>
+            <ol><li>Download the APK on your Android device.</li><li>Open the downloaded file and, if prompted, allow installation from your browser or file manager.</li><li>Tap Install, then open GSAT Preparation.</li></ol>
+        </details>
+        <p class="app-download-note">Preview distribution &middot; This is a debug build for testing. Android may request permission to install this APK.</p>
+        <button class="app-download-later" id="appDownloadLater" type="button">Continue in browser</button>
+    </dialog>
+
+    <script src="download.js" defer></script>
+    <script src="review-content.js" defer></script>
+    <script src="extended-content.js" defer></script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>
